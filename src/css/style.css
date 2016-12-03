@@ -1,0 +1,114 @@
+@value dieWidth: 120px;
+@value dieHeight: 120px;
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #330033;
+    color: #fff;
+}
+
+#fightDiv {
+    width: 100px;
+    height: 50%;
+    display: box;
+}
+
+.main {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #ff00ff;
+}
+
+.player,
+.opponend {
+
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: absolute;
+    display: flex;
+    width: 240px;
+    height: 120px;
+    background-color: black;
+}
+.player {
+    top: 50px;
+    left: 20px;
+}
+
+.opponend {
+    top: 50px;
+    left: 280px;
+}
+
+.dieSlot {
+    display: block;
+    width: dieWidth;
+    height: dieHeight;
+}
+
+.die-wrapper {
+    height: 0; /* ??? */
+    width: 0;
+    padding: 20px;
+    perspective: 800px;
+    perspective-origin: 0% 100px;
+}
+
+.white {
+    position: absolute;
+    top: calc(50%);
+    left: calc(50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #ff00ff;
+}
+
+:local(.die) {
+    position: relative;
+    margin: 50% auto;
+    height: 80px;
+    width: 80px;
+    transition: transform 0.7s ease-out;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    padding: 0px;
+    border-radius: 0px;
+    /*box-shadow: 0 0 1px 1px #fff;*/
+    background-color: rgba(255, 255, 255, 1);
+    -webkit-backface-visibility: hidden;
+    /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
+}
+
+:local(.die) .one {
+    -webkit-transform: rotateX(90deg) translateZ(40px);
+}
+
+:local(.die) .two {
+    -webkit-transform: translateZ(40px);
+}
+
+:local(.die) .three {
+    -webkit-transform: rotateY(90deg) translateZ(40px);
+}
+
+:local(.die) .four {
+    -webkit-transform: rotateY(180deg) translateZ(40px);
+}
+
+:local(.die) .five {
+    -webkit-transform: rotateY(-90deg) translateZ(40px);
+}
+
+:local(.die) .six {
+    -webkit-transform: rotateX(-90deg) translateZ(40px) rotate(180deg);
+}

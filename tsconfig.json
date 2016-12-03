@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "module" : "commonjs",
+    "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules"
+],
+"ignoreRules": {
+    "TS2307": true
+  }
+}
