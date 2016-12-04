@@ -5,6 +5,7 @@ function mod(x,y){
     return ((x%y)+y)%y
 }
 
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -26,8 +27,6 @@ export default class Die {
         this.domnode = domnode;
         this.domnode.innerHTML = dieTemplate(this);
     }
-
-
 
     getValue() {
         const x = mod(this.xangle,4);
@@ -68,7 +67,9 @@ export default class Die {
     }
 
     roll() {
-        this.setValue(getRandomInt(1,6));
+        const result = getRandomInt(1,6)
+        this.setValue(result);
+        return result;
     }
 
     setXAngle() {

@@ -1,21 +1,47 @@
 <div class="main">
-    <div class="player">
-        <div class="dieSlot">
-            {{{playerDieA}}}
+    <div class="props">
+        <div class="player">
+            <div class="name">{{player.name}}</div>
+            <div class="dex">{{player.dex}}</div>
+            <div class="hp">{{player.hp}}</div>
         </div>
-        <div class="dieSlot">
-            {{{playerDieB}}}
-        </div>
-    </div>
-
-    <div class="opponend">
-        <div class="dieSlot">
-            {{{opponendDieA}}}
-        </div>
-        <div class="dieSlot">
-            {{{opponendDieB}}}
+        <div class="enemy">
+            <div class="enemy">{{enemy.name}}</div>
+            <div class="dex">{{enemy.dex}}</div>
+            <div class="hp">{{enemy.hp}}</div>
         </div>
     </div>
 
-    
+    <div class="dice">
+        <div class="player">
+            <div class="dieSlot">
+                {{{playerDieA}}}
+            </div>
+            <div class="dieSlot">
+                {{{playerDieB}}}
+            </div>
+        </div>
+
+        <div class="enemy">
+            <div class="dieSlot">
+                {{{enemyDieA}}}
+            </div>
+            <div class="dieSlot">
+                {{{enemyDieB}}}
+            </div>
+        </div>
+    </div>
+
+    <div class="calc">
+        <div class="player">
+            <div><span class="addition"></span><span class="sum"></span></div>
+            <div class="icon">
+            </div>
+        </div>
+        <div class="enemy">
+            <div><span class="sum"></span><span class="addition"></span></div>
+            <div class="icon">
+            </div>
+        </div>
+    </div>
 </div>

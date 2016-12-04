@@ -11,8 +11,24 @@
 
     </body>
     <script>
-        var RGPFight = window["rpg-fight"];
-        var fight = new RGPFight({});
+        var RPGFight = window["rpg-fight"];
+        var fight = new RPGFight({
+          player : {name: "Urs", dex: 6, hp:20},
+          enemy : {name : "Goblin", dex: 7, hp: 8}
+        });
+
+
+        document.addEventListener('keydown', function(e) {
+            console.log(e.keyCode);
+
+            if(e.keyCode === 32){
+              fight.roll();
+            } else if(e.keyCode === 65){
+              fight.props.changePlayerHP(-2);
+            }
+        }, false);
+
+
         fight.render(document.getElementById('rgp-fight'));
     </script>
 </html>

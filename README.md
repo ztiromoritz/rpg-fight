@@ -4,23 +4,25 @@ Combat system is based on the simple system used in  choose your own adventure
 books.
 
 
+
 ## Usage
 
 ```javascript
-var fight = new RGPFight({duck : true,luck: true});
+var fight = new RGPFight({
+  player : {dex: 6, hp:20},
+  enemy : {dex: 7, hp: 8}
+});
 
-fight.addPlayer({dex: 6,hp: 20, luck: 20});
-fight.addOpponent({dex: 7, hp: 8});
 
 fight.onWin(function(player){
  //handle win
 });
 
-fight.onLost(function(player){
- //handle lost
+fight.onLose(function(player){
+ //handle lose
 });
 
-fight.onRound(function(player, opponent){
+fight.onRound(function(player, enemy){
  // after each round
 });
 
@@ -47,6 +49,10 @@ CSS Animations:
  * https://github.com/tictail/bounce.js
  * http://visionmedia.github.io/move.js/
  * http://paulrhayes.com/2009-07/animated-css3-cube-interface-using-3d-transforms/
+
+## Compatibility
+Dice animation does not work in IE 11.
+TODO: fallback??
 
 ## License
 The code created in this project is licensed under the [MIT License](./LICENSE)

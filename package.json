@@ -26,14 +26,13 @@
     "html-loader": "^0.4.4",
     "mocha": "2.3.4",
     "style-loader": "^0.13.1",
-    "ts-loader": "^1.2.2",
-    "typescript": "^2.0.10",
     "webpack": "1.12.9",
+    "webpack-dev-server": "^1.16.2",
     "yargs": "3.32.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ztiromoritz/rgp-fight.git"
+    "url": "https://github.com/ztiromoritz/rpg-fight.git"
   },
   "keywords": [
     "rgp",
@@ -42,7 +41,5 @@
   ],
   "author": "Moritz Rebbert",
   "license": "MIT",
-  "dependencies": {
-    "snapsvg": "^0.4.0"
-  }
+  "dependencies": {}
 }
