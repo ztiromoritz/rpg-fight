@@ -1,4 +1,4 @@
-# RPG-Fight
+# RPG-Fight (Alpha)
 A rgp fight plugin for HTML5 games.
 Combat system is based on the simple system used in  choose your own adventure
 books.
